@@ -1,0 +1,37 @@
+{
+  "name": "locatr",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "apps/*"
+    ],
+    "nohoist": [
+      "**/mobile/**",
+      "**/web/**",
+      "**/server/**"
+    ]
+  },
+  "scripts": {
+    "dev": "yarn workspaces run dev",
+    "build": "yarn workspaces run build",
+    "lint": "yarn workspaces run lint",
+    "type-check": "yarn workspaces run type-check",
+    "format": "yarn workspaces run format",
+    "commit": "cz",
+    "prepare": "husky"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "commitizen": "^4.3.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.2"
+  },
+  "packageManager": "yarn@1.22.22"
+}
