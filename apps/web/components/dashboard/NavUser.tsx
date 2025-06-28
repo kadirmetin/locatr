@@ -59,7 +59,7 @@ export function NavUser({ user }: NavUserProps) {
       });
 
       await logout();
-      router.replace('/dashboard');
+      router.replace('/auth/login');
     } catch (error) {
       const errorMessage =
         error instanceof Error ? error.message : 'An error occurred during logout';
