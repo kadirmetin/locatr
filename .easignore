@@ -1,0 +1,9 @@
+# .easignore
+apps/web
+apps/server
+node_modules/
+apps/mobile/android
+apps/mobile/.expo
+.git/
+*.log
+.env*
