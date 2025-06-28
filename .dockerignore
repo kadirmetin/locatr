@@ -1,0 +1,44 @@
+# Dependencies
+node_modules
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Production builds
+.next/
+dist/
+build/
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Git
+.git
+.gitignore
+
+# Other apps (sadece server deploy ediyoruz)
+apps/web
+apps/mobile
+
+# Logs
+*.log
+logs/
+
+# Coverage
+coverage/
+
+# Temporary
+tmp/
+temp/

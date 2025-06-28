@@ -82,7 +82,7 @@ export function AppSidebar() {
     },
     {
       title: 'GitHub',
-      url: 'https://github.com/kadirmetin/locatr-monorepo',
+      url: 'https://github.com/kadirmetin/locatr',
       icon: Github,
     },
     {

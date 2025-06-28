@@ -27,7 +27,7 @@ interface AddDeviceDialogProps {
 
 export function AddDeviceDialog({ open, onCloseAction }: AddDeviceDialogProps) {
   const [isCollapsibleOpen, setIsCollapsibleOpen] = useState(false);
-  const appUrl = 'https://github.com/kadirmetin/locatr-monorepo/releases/latest';
+  const appUrl = 'https://github.com/kadirmetin/locatr/releases/latest';
 
   return (
     <Dialog open={open} onOpenChange={onCloseAction}>
