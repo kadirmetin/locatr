@@ -13,6 +13,7 @@ const defaultCookieOptions: CookieOptions = {
   httpOnly: true,
   secure: config.NODE_ENV === "production" ? true : false,
   sameSite: config.NODE_ENV === "production" ? "none" : "lax",
+  domain: config.NODE_ENV === "production" ? ".locatr.tech" : undefined,
 };
 
 export const getRefreshTokenCookieOptions = (): CookieOptions => {
@@ -47,6 +48,16 @@ export const setAuthenticationCookies = ({
     .cookie("refreshToken", refreshToken, getRefreshTokenCookieOptions());
 
 export const clearAuthenticationCookies = (res: Response): Response =>
-  res.clearCookie("accessToken").clearCookie("refreshToken", {
-    path: "/",
-  });
+  res
+    .clearCookie("accessToken", {
+      path: "/",
+      domain: config.NODE_ENV === "production" ? ".locatr.tech" : undefined,
+      secure: config.NODE_ENV === "production" ? true : false,
+      sameSite: config.NODE_ENV === "production" ? "none" : "lax",
+    })
+    .clearCookie("refreshToken", {
+      path: "/",
+      domain: config.NODE_ENV === "production" ? ".locatr.tech" : undefined,
+      secure: config.NODE_ENV === "production" ? true : false,
+      sameSite: config.NODE_ENV === "production" ? "none" : "lax",
+    });
