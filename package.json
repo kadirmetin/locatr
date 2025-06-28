@@ -6,17 +6,17 @@
       "apps/*"
     ],
     "nohoist": [
-      "**/mobile/**",
-      "**/web/**",
-      "**/server/**"
+      "**"
     ]
   },
   "scripts": {
     "dev": "yarn workspaces run dev",
     "build": "yarn workspaces run build",
     "lint": "yarn workspaces run lint",
+    "lint:fix": "yarn workspaces run lint",
     "type-check": "yarn workspaces run type-check",
     "format": "yarn workspaces run format",
+    "format:check": "yarn workspaces run format:check",
     "commit": "cz",
     "prepare": "husky"
   },
@@ -33,5 +33,6 @@
     "husky": "^9.1.7",
     "lint-staged": "^16.1.2"
   },
-  "packageManager": "yarn@1.22.22"
+  "packageManager": "yarn@1.22.22",
+  "version": "1.0.0"
 }
