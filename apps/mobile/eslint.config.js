@@ -15,5 +15,6 @@ module.exports = defineConfig([
       "coverage/*",
       "**/*.gen.ts",
     ],
+    rules: ["error", { endOfLine: "auto" }],
   },
 ]);

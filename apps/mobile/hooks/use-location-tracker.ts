@@ -201,7 +201,7 @@ export const useLocationTracker = (deviceId?: string, token?: string) => {
 
       const socket = io(process.env.EXPO_PUBLIC_SOCKET_BASE_URL || "", {
         auth: { deviceId, token },
-        transports: ["websocket"],
+        transports: ["websocket", "polling"],
         timeout: 20000,
       });
 
