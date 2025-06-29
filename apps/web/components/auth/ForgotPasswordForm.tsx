@@ -60,7 +60,8 @@ const ForgotPasswordForm = () => {
     try {
       setStatus({});
 
-      const captchaToken = await getCaptchaToken('forgot-password');
+      const captchaToken = await getCaptchaToken('forgot_password');
+
       const captchaResult = await forgotPasswordAction(captchaToken);
 
       if (!captchaResult.success) {

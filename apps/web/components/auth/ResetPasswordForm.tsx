@@ -91,7 +91,7 @@ const ResetPasswordForm = ({ verificationCode }: ResetPasswordFormProps) => {
       setError(undefined);
 
       try {
-        const captchaToken = await getCaptchaToken('reset-password');
+        const captchaToken = await getCaptchaToken('reset_password');
         const captchaResult = await resetPasswordAction(captchaToken);
 
         if (!captchaResult.success) {

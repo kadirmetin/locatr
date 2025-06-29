@@ -58,7 +58,7 @@ export function EmailVerificationDialog({
     setIsLoading(true);
 
     try {
-      const captchaToken = await getCaptchaToken('resendVerificationEmail');
+      const captchaToken = await getCaptchaToken('resend_verification');
       const captchaResult = await resendVerificationEmailAction(captchaToken);
 
       if (!captchaResult.success) {

@@ -59,6 +59,10 @@ async function handleCaptcha(
   }
 }
 
+export async function forgotPasswordAction(token: string | null): Promise<CaptchaActionResult> {
+  return await handleCaptcha(token, 'forgot_password');
+}
+
 export async function loginAction(token: string | null): Promise<CaptchaActionResult> {
   return await handleCaptcha(token, 'login');
 }
@@ -67,16 +71,12 @@ export async function registerAction(token: string | null): Promise<CaptchaActio
   return await handleCaptcha(token, 'register');
 }
 
-export async function forgotPasswordAction(token: string | null): Promise<CaptchaActionResult> {
-  return await handleCaptcha(token, 'forgotPassword');
-}
-
 export async function resetPasswordAction(token: string | null): Promise<CaptchaActionResult> {
-  return await handleCaptcha(token, 'resetPassword');
+  return await handleCaptcha(token, 'reset_password');
 }
 
 export async function resendVerificationEmailAction(
   token: string | null
 ): Promise<CaptchaActionResult> {
-  return await handleCaptcha(token, 'resendVerificationEmail');
+  return await handleCaptcha(token, 'resend_verification');
 }
