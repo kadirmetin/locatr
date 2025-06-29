@@ -48,6 +48,16 @@ export const setAuthenticationCookies = ({
     .cookie("refreshToken", refreshToken, getRefreshTokenCookieOptions());
 
 export const clearAuthenticationCookies = (res: Response): Response =>
-  res.clearCookie("accessToken").clearCookie("refreshToken", {
-    path: "/",
-  });
+  res
+    .clearCookie("accessToken", {
+      path: "/",
+      httpOnly: true,
+      secure: process.env.NODE_ENV === "production",
+      sameSite: "strict",
+    })
+    .clearCookie("refreshToken", {
+      path: "/",
+      httpOnly: true,
+      secure: process.env.NODE_ENV === "production",
+      sameSite: "strict",
+    });
