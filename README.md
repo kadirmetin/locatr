@@ -123,10 +123,10 @@ Locatr is a modern and secure family location tracking app designed to help fami
 
 <div align="center">
   
-| **👋 Welcome Screen** | **🏠 Home Dashboard** |
-|:---:|:---:|
-| <img src="https://github.com/user-attachments/assets/ca747648-348e-48fe-b49a-8ad416bb7f54" alt="Mobile Welcome Screen" width="250"> | <img src="https://github.com/user-attachments/assets/c2a5b0b1-6bd9-47d9-a8ea-61f1459e3b4e" alt="Mobile Home Screen" width="250"> |
-| *Get started with Locatr* | *Track your family members* |
+| **👋 Welcome Screen** | **🏠 Home Dashboard** | **⚙️ Settings**
+|:---:|:---:|:---:|
+| <img src="https://github.com/user-attachments/assets/ca747648-348e-48fe-b49a-8ad416bb7f54" alt="Mobile Welcome Screen" width="250"> | <img src="https://github.com/user-attachments/assets/c2a5b0b1-6bd9-47d9-a8ea-61f1459e3b4e" alt="Mobile Home Screen" width="250"> | <img src="https://github.com/user-attachments/assets/ef9ad808-4188-4ae4-b3b5-589b0dacd5c8" alt="Mobile Settings" width="250">
+| *Get started with Locatr* | *Track your family members* | *Customize experience* |
 
 </div>
 
