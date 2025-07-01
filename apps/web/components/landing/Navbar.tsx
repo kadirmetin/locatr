@@ -16,6 +16,8 @@ import { scrollToSection } from '@/lib/utils/scrollToSection';
 import LogoBlack from '@/public/logo-black.svg';
 import Logo from '@/public/logo.svg';
 
+import { GitHubStarButton } from '../ui/github-star';
+
 const menuItems = [
   { name: 'Home', href: 'hero' },
   { name: 'Features', href: 'features' },
@@ -37,8 +39,8 @@ const Navbar = () => {
     setIsOpen(false);
   };
 
-  const handleLogin = () => {
-    router.push('/auth/login');
+  const handleDashboard = () => {
+    router.push('/dashboard');
   };
 
   return (
@@ -73,6 +75,11 @@ const Navbar = () => {
 
               {/* Actions */}
               <div className="flex items-center space-x-3">
+                {/* GitHub Star Button - Desktop */}
+                <div className="hidden sm:block">
+                  <GitHubStarButton owner="kadirmetin" repo="locatr" variant="ghost" />
+                </div>
+
                 {/* Theme Toggle */}
                 <Button
                   variant="ghost"
@@ -88,9 +95,9 @@ const Navbar = () => {
                   <span className="sr-only">Toggle theme</span>
                 </Button>
 
-                {/* Login Button */}
-                <Button className="hidden sm:flex rounded-full px-6" onClick={handleLogin}>
-                  Login
+                {/* Dasboard Button */}
+                <Button className="hidden sm:flex rounded-full px-6" onClick={handleDashboard}>
+                  Dashboard
                 </Button>
 
                 {/* Mobile Menu Button */}
@@ -125,9 +132,16 @@ const Navbar = () => {
                   </button>
                 ))}
 
-                <div className="pt-3 border-t border-gray-200 dark:border-gray-700">
-                  <Button className="w-full rounded-xl" onClick={handleLogin}>
-                    Login
+                {/* Mobile GitHub Star Button */}
+                <div className="flex flex-col pt-3 gap-2 border-t border-gray-200 dark:border-gray-700">
+                  <GitHubStarButton
+                    owner="kadirmetin"
+                    repo="locatr"
+                    className="w-full rounded-xl"
+                    size="lg"
+                  />
+                  <Button className="w-full rounded-xl" onClick={handleDashboard}>
+                    Dashboard
                   </Button>
                 </div>
               </div>
