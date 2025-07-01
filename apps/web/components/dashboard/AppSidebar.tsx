@@ -82,7 +82,7 @@ export function AppSidebar() {
     },
     {
       title: 'GitHub',
-      url: 'https://github.com/kadirmetin/locatr',
+      url: process.env.NEXT_PUBLIC_REPO_URL as string,
       icon: Github,
     },
     {
