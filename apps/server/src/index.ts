@@ -86,11 +86,11 @@ io.engine.on("connection_error", (err) => {
 const startServer = async () => {
   try {
     await connectDatabase();
+    
+    const PORT = Number(config.SERVER_PORT) || 5000;
 
-    server.listen(config.SERVER_PORT, () => {
-      console.log(
-        `🚀 Server listening on port ${config.SERVER_PORT} in ${config.NODE_ENV} mode`,
-      );
+    server.listen(PORT, "0.0.0.0", () => {
+      console.log(`🚀 Server listening on port ${PORT}`);
     });
   } catch (error) {
     console.error("Failed to start server:", error);
