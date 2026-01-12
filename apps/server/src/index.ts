@@ -58,12 +58,16 @@ app.use(globalRateLimiter);
 
 app.get(
   "/",
-  asyncHandler(async (_req: Request, res: Response): Promise<Response> => {
+  asyncHandler((_req: Request, res: Response): Promise<Response> => {
     return res.status(HTTPSTATUS.OK).json({
       message: "Hello World!",
     });
   }),
 );
+
+app.get('/health', (_req: Request, res: Response): void => {
+  res.send(HTTPSTATUS.OK).send('OK');
+});
 
 app.use(`${BASE_PATH}/auth`, authRoutes);
 app.use(`${BASE_PATH}/session`, authenticateJWT, sessionRoutes);
@@ -86,7 +90,7 @@ io.engine.on("connection_error", (err) => {
 const startServer = async () => {
   try {
     await connectDatabase();
-    
+
     const PORT = Number(config.SERVER_PORT) || 5000;
 
     server.listen(PORT, "0.0.0.0", () => {
