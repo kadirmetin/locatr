@@ -56,17 +56,14 @@ app.use(cookieParser());
 app.use(passport.initialize());
 app.use(globalRateLimiter);
 
-app.get(
-  "/",
-  asyncHandler((_req: Request, res: Response): Promise<Response> => {
-    return res.status(HTTPSTATUS.OK).json({
+app.get('/', (_req: Request, res: Response): void => {
+  res.status(HTTPSTATUS.OK).json({
       message: "Hello World!",
     });
-  }),
-);
+});
 
 app.get('/health', (_req: Request, res: Response): void => {
-  res.send(HTTPSTATUS.OK).send('OK');
+  res.status(HTTPSTATUS.OK).send('OK'); 
 });
 
 app.use(`${BASE_PATH}/auth`, authRoutes);
