@@ -4,12 +4,10 @@ import "dotenv/config";
 import express, { Request, Response } from "express";
 import { createServer } from "http";
 import { Server as SocketIOServer } from "socket.io";
-
 import { authenticateJWT } from "./common/strategies/jwt.strategy";
 import { config } from "./configs/app.config";
 import { HTTPSTATUS } from "./configs/http.config";
 import connectDatabase from "./database/database";
-import { asyncHandler } from "./middlewares/asyncHandler";
 import { errorHandler } from "./middlewares/errorHandler";
 import passport from "./middlewares/passport";
 import { globalRateLimiter } from "./middlewares/rateLimiter";
