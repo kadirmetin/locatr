@@ -254,8 +254,7 @@ For more details, read our [Privacy Policy](https://locatr.tech/privacy) and [Te
 
 ### Getting Help
 
-- **📧 [Email Support](mailto:support@locatr.tech)** - Direct support for urgent issues
-- **🐛 [GitHub Issues](https://github.com/kadirmetin/locatr/issues)** - Report bugs and request features
+- **📧 [Email Support](mailto:hello@kadirmetin.dev)** - Direct support for urgent issues
 
 ---
 
